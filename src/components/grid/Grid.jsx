@@ -15,11 +15,12 @@ const Grid = ({
   headerCellStyle,
   cellStyle,
   headerStyle,
+  initRowsPerPage,
 }) => {
   const [showHeader, setShowHeader] = useState(header);
   const [filter, setFilter] = useState("");
   const [currentPage, setCurrentPage] = useState(1);
-  const [rowsPerPage, setRowsPerPage] = useState(10); //can get it from as a prop and/or make a drop down
+  const [rowsPerPage, setRowsPerPage] = useState(initRowsPerPage);
   const [sortByIndex, setSortByIndex] = useState();
   const [isAscend, setIsAscend] = useState(true);
 

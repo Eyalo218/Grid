@@ -8,7 +8,7 @@ function App() {
         header={true} // toggle header on and off
         headerData={DummyData.cols} // array to show th data
         gridData={DummyData.data} // matrix that contain array of table rows data
-        rowsPerPage={10} //how many rows per page
+        initRowsPerPage={20} //how many rows per page
         alternatingColors={true} //optional input deciding if the table will have alternatingColors
         headerStyle={{}} // optional style object for the header
         cellStyle={{}} // optional style object  for the cell
