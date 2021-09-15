@@ -1,23 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
-
+import Grid from "./components/grid/Grid";
+import { DummyData } from "./dummyData";
+// import Test from "./components/grid/Test";  // used to test if i can render custom components
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='App'>
+      <Grid
+        header={true} // toggle header on and off
+        headerData={DummyData.cols} // array to show th data
+        gridData={DummyData.data} // matrix that contain array of table rows data
+        rowsPerPage={10} //how many rows per page
+        alternatingColors={true} //optional input deciding if the table will have alternatingColors
+        headerStyle={{}} // optional style object for the header
+        cellStyle={{}} // optional style object  for the cell
+        headerCellStyle={{}} // optional style object  for the header cell
+        tableBodyStyle={{}} // optional style object  for the tableBody
+      />
     </div>
   );
 }
